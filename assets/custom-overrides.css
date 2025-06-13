@@ -32,4 +32,24 @@ main section,
 .section {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+/* Collection hero height adjustment */
+.collection-hero {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 750px) {
+  /* Reduce default Dawn hero padding */
+  .collection-hero.collection-hero--with-image {
+    padding: 4rem 0; /* was ~8rem via calc() in original css */
+  }
+}
+
+/* Limit hero image container height on large screens */
+@media screen and (min-width: 750px) {
+  .collection-hero__image-container {
+    max-height: 50vh;
+  }
 } 
